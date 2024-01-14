@@ -67,7 +67,7 @@ class ProductManager {
             };
         };
 
-        updateProduct = async(id,title,description,price,img,code,stock) =>{
+        updateProduct = async (id,title,description,price,img,code,stock) =>{
             const index = this.products.findIndex(item => item.id === id);
 
             if(index != -1){
@@ -90,3 +90,5 @@ class ProductManager {
         };    
 };
     
+
+
