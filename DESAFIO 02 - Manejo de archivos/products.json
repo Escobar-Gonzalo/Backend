@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Yerba Marolio",
+    "description": "Esto es un producto de prueba",
+    "price": 200,
+    "img": "Sin imagen",
+    "code": "abc123",
+    "stock": 25
+  },
+  {
+    "id": 3,
+    "title": "producto prueba 3",
+    "description": "Esto es un producto de prueba",
+    "price": 100,
+    "img": "Sin imagen",
+    "code": "abc1235",
+    "stock": 25
+  }
+]
