@@ -11,10 +11,10 @@ class ProductManager {
 
         loadProducts = async () => {
             try{
-                const products = JSON.parse(await fs.readFile(this.path, 'utf-8'))
+                let products = JSON.parse(await fs.readFile(this.path, 'utf-8'))
                 return products;
             } catch (error){ 
-                console.error("There's no product yet")
+                console.log("🚀 ~ ProductManager ~ loadProducts= ~ There's no product yet", console.error("There's no product yet"))
             }
             
         };
@@ -22,9 +22,9 @@ class ProductManager {
         saveProducts = async (array) =>{
             try{
                 await fs.writeFile(this.path, JSON.stringify(array,null,2));
-                console.log("Products saving succes!");
+                console.log("🚀 ~ ProductManager ~ saveProducts= ~ Products saving succes!");
             }catch(error){
-                console.error('Error saving the products');
+                console.log("🚀 ~ ProductManager ~ saveProducts= ~ Error saving the products:", console.error('Error saving the products'))
             };
         };
 
@@ -56,9 +56,9 @@ class ProductManager {
         };
 
         getProducts =  async () =>{
-            return await this.loadProducts().then((products)=>{
-                console.log(products);
-            });
+            const products = await this.loadProducts();
+            console.log(products);
+            return products;
         };
 
         async getProductById(pId){
@@ -67,7 +67,7 @@ class ProductManager {
             if(!product){
                 console.error("Product not found");
             }else{
-                console.log(product);
+                console.log("🚀 ~ ProductManager ~ getProductById ~:", console.log(product))
                 return product;
             };
         };
@@ -80,14 +80,15 @@ class ProductManager {
                 return;
             }
             products[index] = {...products[index], ...updatedInfo };
-            console.log(`Product: ${products[index]} updated successfully`)
+            console.log("🚀 ~ ProductManager ~ updateProductById=:", products[index])
             await this.saveProducts(products);
+            console.log(`Product: ${products[index]} updated successfully`)
         };
 
         deleteProduct = async (pId) =>{
-            const productFound = await this.getProductById(pId);
+            const products = await this.loadProducts();
+            let productFound = await this.getProductById(pId);
             if(productFound){
-                const products = await this.loadProducts();
                 const updateProducts = products.filter(item => item.id != pId);
                 await this.saveProducts(updateProducts);
             }
