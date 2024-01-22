@@ -3,7 +3,7 @@ import { promises as fs } from 'fs';
 class ProductManager {
 
     static incrementId = 0;
-
+    
     constructor(path) {
         this.products =[];
         this.path = path;
@@ -15,44 +15,54 @@ class ProductManager {
                 return products;
             } catch (error){ 
                 console.log("🚀 ~ ProductManager ~ loadProducts= ~ There's no product yet", console.error("There's no product yet"))
-            }
-            
+            };
         };
 
-        saveProducts = async (array) =>{
+        saveProducts = async (arrayProducts) =>{
             try{
-                await fs.writeFile(this.path, JSON.stringify(array,null,2));
-                console.log("🚀 ~ ProductManager ~ saveProducts= ~ Products saving succes!");
+                let existingData = [];
+                    try{
+                        const data = await fs.readFile(this.path, "utf-8");
+                        existingData = JSON.parse(data);
+                    }catch (error){
+                        console.log("Error todos vamos a morir", error);
+                    };
+
+                const newProducts = arrayProducts.filter((newProduct)=> !existingData.some((existingProduct)=> existingProduct.code === newProduct.code));
+
+                existingData.push(...newProducts);
+                await fs.writeFile(this.path, JSON.stringify(existingData, null, 2));
+                console.log("Products saving successfully!");
             }catch(error){
-                console.log("🚀 ~ ProductManager ~ saveProducts= ~ Error saving the products:", console.error('Error saving the products'))
+                console.error("An error has occur, try again", error);
             };
         };
 
-
-        addProduct = async ({title,description,price,img,code,stock}) =>{
-            const productsArray = await this.loadProducts();
+        addProduct = async ({title,description,price,img,code,stock}) =>{  
+            let products = await this.loadProducts();
+            const isRepeat = products.some((product)=>product.code === code);
+            if(isRepeat) {
+                console.log(`The product with code: ${code} already exist`);
+                return;
+            };
             if(!title || !description || !price || !img || !code || !stock){
-                console.log("All fields are mandatory");
+                console.log("All field are mandatory");
                 return;
             };
-            if(productsArray.some(item => item.code === code)){
-                console.log(`The code ${code} already exist`);
-                return;
+            if(!isRepeat){
+                const newProduct = {
+                    id: ++ProductManager.incrementId,
+                    title,
+                    description,
+                    price,
+                    img,
+                    code,
+                    stock
+                };
+                this.products.push(newProduct);
+                await this.saveProducts(this.products);
+                return newProduct;
             };
-
-            const newProduct = {
-                id: ++ProductManager.incrementId,
-                title,
-                description,
-                price,
-                img,
-                code,
-                stock
-            };
-
-            this.products.push(newProduct);
-            console.log(this.products);
-            await this.saveProducts(this.products)
         };
 
         getProducts =  async () =>{
@@ -96,3 +106,4 @@ class ProductManager {
 };
 
 export default ProductManager;
+
