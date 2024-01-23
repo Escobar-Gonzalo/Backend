@@ -59,7 +59,13 @@ class ProductManager {
                     code,
                     stock
                 };
+                //console.log("Current incrementId:", ProductManager.incrementId);
+                //newProduct.id = this.generateUniqueId();
+                //console.log("New Product ID:", newProduct.id);
+                //console.log("Current incrementId:", ProductManager.incrementId);
+                //console.log("Current products array:", this.products);
                 this.products.push(newProduct);
+                //console.log("Updated products array:", this.products);
                 await this.saveProducts(this.products);
                 return newProduct;
             };
@@ -103,6 +109,10 @@ class ProductManager {
                 await this.saveProducts(updateProducts);
             }
         };
+
+        /*generateUniqueId() {
+            return ++ProductManager.incrementId;
+        }*/
 };
 
 export default ProductManager;
