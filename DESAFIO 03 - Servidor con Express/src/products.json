@@ -1,102 +1,102 @@
 [
 
-    {   "id": 1,
-        "title": "GTA VI", 
-        "description" : "GTA VI", 
-        "price": "40",
-        "img": "No image", 
-        "code": "G001", 
-        "stock": "300"
-    },
+  {   "id": 1,
+      "title": "GTA VI", 
+      "description" : "GTA VI", 
+      "price": "40",
+      "img": "No image", 
+      "code": "G001", 
+      "stock": "300"
+  },
 
-    {
-        "id": 2,
-        "title": "Palmword", 
-        "description" : "Palmword", 
-        "price": "28",
-        "img": "No image", 
-        "code": "G002", 
-        "stock": "300"
-    },
+  {
+      "id": 2,
+      "title": "Palmword", 
+      "description" : "Palmword", 
+      "price": "28",
+      "img": "No image", 
+      "code": "G002", 
+      "stock": "300"
+  },
 
-    {   
-        "id": 3,
-        "title": "TES V: Skyrim", 
-        "description" : "TES V: Skyrim", 
-        "price": "32",
-        "img": "No image", 
-        "code": "G003", 
-        "stock": "300"
-    },
+  {   
+      "id": 3,
+      "title": "TES V: Skyrim", 
+      "description" : "TES V: Skyrim", 
+      "price": "32",
+      "img": "No image", 
+      "code": "G003", 
+      "stock": "300"
+  },
 
-    {   
-        "id": 4,
-        "title": "Starfield", 
-        "description" : "Starfield", 
-        "price": "50",
-        "img": "No image", 
-        "code": "G004", 
-        "stock": "300"
-    },
+  {   
+      "id": 4,
+      "title": "Starfield", 
+      "description" : "Starfield", 
+      "price": "50",
+      "img": "No image", 
+      "code": "G004", 
+      "stock": "300"
+  },
 
-    {
-        "id": 5,
-        "title": "eFootball 2023", 
-        "description" : "eFootball 2023", 
-        "price": "Free to Play",
-        "img": "No image", 
-        "code": "G005", 
-        "stock": "300"
-    },
+  {
+      "id": 5,
+      "title": "eFootball 2023", 
+      "description" : "eFootball 2023", 
+      "price": "Free to Play",
+      "img": "No image", 
+      "code": "G005", 
+      "stock": "300"
+  },
 
-    {   
-        "id": 6,
-        "title": "Sims 4", 
-        "description" : "Sims 4", 
-        "price": "Free to Play",
-        "img": "No image", 
-        "code": "G006", 
-        "stock": "300"
-    },
+  {   
+      "id": 6,
+      "title": "Sims 4", 
+      "description" : "Sims 4", 
+      "price": "Free to Play",
+      "img": "No image", 
+      "code": "G006", 
+      "stock": "300"
+  },
 
-    {
-        "id": 7,
-        "title": "Cult of the Lamb", 
-        "description" : "Cult of the Lamb", 
-        "price": "8",
-        "img": "No image", 
-        "code": "G007", 
-        "stock": "300"
-    },
+  {
+      "id": 7,
+      "title": "Cult of the Lamb", 
+      "description" : "Cult of the Lamb", 
+      "price": "8",
+      "img": "No image", 
+      "code": "G007", 
+      "stock": "300"
+  },
 
-    {   
-        "id": 8,
-        "title": "Mafia: Trilogy", 
-        "description" : "Mafia: trilogy", 
-        "price": "10",
-        "img": "No image", 
-        "code": "G008", 
-        "stock": "300"
-    },
+  {   
+      "id": 8,
+      "title": "Mafia: Trilogy", 
+      "description" : "Mafia: trilogy", 
+      "price": "10",
+      "img": "No image", 
+      "code": "G008", 
+      "stock": "300"
+  },
 
-    {
-        "id": 9,
-        "title": "A Plague Tale", 
-        "description" : "A Plague Tale", 
-        "price": "20",
-        "img": "No image", 
-        "code": "G009", 
-        "stock": "300"
-    },
+  {
+      "id": 9,
+      "title": "A Plague Tale", 
+      "description" : "A Plague Tale", 
+      "price": "20",
+      "img": "No image", 
+      "code": "G009", 
+      "stock": "300"
+  },
 
-    {
-        "id": 10,
-        "title": "DOTA 2", 
-        "description" : "DOTA 2", 
-        "price": "Free to Play",
-        "img": "No image", 
-        "code": "G010", 
-        "stock": "300"
-    }
+  {
+      "id": 10,
+      "title": "DOTA 2", 
+      "description" : "DOTA 2", 
+      "price": "Free to Play",
+      "img": "No image", 
+      "code": "G010", 
+      "stock": "300"
+  }
 
 ]

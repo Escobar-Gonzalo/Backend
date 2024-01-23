@@ -7,6 +7,7 @@ class ProductManager {
     constructor(path) {
         this.products =[];
         this.path = path;
+
     };
 
         loadProducts = async () => {
@@ -51,7 +52,7 @@ class ProductManager {
             };
             if(!isRepeat){
                 const newProduct = {
-                    id: ++ProductManager.incrementId,
+                    productID: this.countID,
                     title,
                     description,
                     price,
