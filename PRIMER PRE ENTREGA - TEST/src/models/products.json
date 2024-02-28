@@ -1,0 +1,57 @@
+[
+  {
+    "title": "AGADDFAFD",
+    "description": "Descripción del aeasdasdas.",
+    "price": 3.5,
+    "code": "AS8",
+    "stock": 40,
+    "category": "polo",
+    "status": true,
+    "thumbnails": [],
+    "id": 2
+  },
+  {
+    "title": "AFERAGADGAERGADG",
+    "description": "Descripción del aeasdasdas.",
+    "price": 3.5,
+    "code": "AS9",
+    "stock": 40,
+    "category": "polo",
+    "status": true,
+    "thumbnails": [],
+    "id": 3
+  },
+  {
+    "title": "ERERTADGHASDFDASFD",
+    "description": "Descripción del aeasdasdas.",
+    "price": 3.5,
+    "code": "AS10",
+    "stock": 40,
+    "category": "polo",
+    "status": true,
+    "thumbnails": [],
+    "id": 4
+  },
+  {
+    "title": "Eaftherhewwsgfrww",
+    "description": "Descripción del aeasdasdas.",
+    "price": 3.5,
+    "code": "AS11",
+    "stock": 40,
+    "category": "polo",
+    "status": true,
+    "thumbnails": [],
+    "id": 5
+  },
+  {
+    "title": "Eaftherhewasdasdwrrww",
+    "description": "Descripción del aeasdasdas.",
+    "price": 3.5,
+    "code": "AS12",
+    "stock": 40,
+    "category": "polo",
+    "status": true,
+    "thumbnails": [],
+    "id": 6
+  }
+]
